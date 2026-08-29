@@ -2,50 +2,50 @@ const ORES = {
     'stone': {
         color: '#888c8d',
         dense: 1,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[1],sharkUpgEffect('m3')).mul(getCRBoost(8)).mul(sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).pow(forgeUpgradeEffect('drill')).pow(getPAEffect(2)).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[1],sharkUpgEffect('m3')).mul(getCRBoost(8)).mul(sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).mul(5)pow(forgeUpgradeEffect('drill')).pow(getPAEffect(2)).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'coal': {
         color: '#343735',
         dense: 2,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[1],sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[1],sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).mul(5).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'iron': {
         color: '#e5e5e5',
         dense: 10,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[2]??1,sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[2]??1,sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).mul(5)pow(tmp.mining_tier_bonus[8]??1) },
     },
     'gold': {
         color: '#ffeb3b',
         dense: 100,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[3]??1,sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[3]??1,sharkUpgEffect('m5')).mul(simpleResearchEffect('f6')).mul(5)pow(tmp.mining_tier_bonus[8]??1) },
     },
     'platinum': {
         color: '#a0b2c6',
         dense: 2500,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[4]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[4]??1,simpleResearchEffect('f6')).mul(5)pow(tmp.mining_tier_bonus[8]??1) },
     },
     'bismuth': {
         color: `linear-gradient(0deg, rgb(255,74,220) 0%, rgb(223,177,79) 25%, rgb(239,241,122) 50%, rgb(120,203,109) 75%, rgb(24,247,255) 100%)`,
         textColor: 'rgb(255,74,220)',
         dense: 1e8,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[5]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[5]??1,simpleResearchEffect('f6')).mul(5).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'diamond': {
         color: '#b9f2ff',
         dense: 1e11,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[6]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[6]??1,simpleResearchEffect('f6')).mul(5).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'obsidian': {
         color: '#441269',
         dense: 1e13,
         luck_penalty: 0.1,
-        get mult() { return Decimal.mul(tmp.mining_tier_bonus[7]??1,simpleResearchEffect('f6')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(tmp.mining_tier_bonus[7]??1,simpleResearchEffect('f6')).mul(5).pow(tmp.mining_tier_bonus[8]??1) },
     },
     'vibranium': {
         color: '#4AE07B',
         dense: 1e14,
         luck_penalty: 0.1,
-        get mult() { return Decimal.mul(simpleResearchEffect('f6'),getSharkRankBonus('vibranium')).pow(tmp.mining_tier_bonus[8]??1) },
+        get mult() { return Decimal.mul(simpleResearchEffect('f6'),getSharkRankBonus('vibranium')).mul(5).pow(tmp.mining_tier_bonus[8]??1) },
     },
     // Non-Earth Only
     'radium': {
