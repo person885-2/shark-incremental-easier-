@@ -50,7 +50,7 @@ const EVOLUTION_TREE = {
 
         ()=>CURRENCIES.fish.total.max(0).add(10).log10().log10().div(2).mul(simpleETEffect(36)),
         ()=>CURRENCIES.stone.amount.max(0).add(1).log10().mul(5).mul(simpleETEffect(37)),
-        ()=>CURRENCIES.humanoid.amount.mul(simpleETEffect(38)).times(3),
+        ()=>CURRENCIES.humanoid.amount.mul(simpleETEffect(38)).times(9),
         ()=>Decimal.mul(30,simpleETEffect(39)),
 
         null,
