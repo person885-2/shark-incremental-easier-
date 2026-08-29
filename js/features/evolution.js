@@ -20,12 +20,12 @@ const EVOLUTION_TREE = {
     effect: [
         ()=>CURRENCIES.fish.total.max(0).add(10).log10().log10().add(1).pow(simpleETEffect(20)).pow(simpleETEffect(36)),
         ()=>CURRENCIES.prestige.total.max(0).add(10).log10().log10().mul(1.5).add(1).pow(simpleETEffect(21)).pow(simpleETEffect(37)),
-        ()=>CURRENCIES.core.total.max(0).add(10).log10().root(2).pow(simpleETEffect(22)).pow(simpleETEffect(38)),
+        ()=>CURRENCIES.core.total.max(0).add(10).log10().root(2).pow(simpleETEffect(22)).pow(simpleETEffect(38)).times(5),
         ()=>Decimal.pow(10,simpleETEffect(23)).pow(simpleETEffect(39)),
 
         ()=>Decimal.pow(10,simpleETEffect(36)),
         ()=>Decimal.pow(10,simpleETEffect(37)),
-        ()=>Decimal.pow(10,simpleETEffect(38)),
+        ()=>Decimal.pow(15,simpleETEffect(38)),
         ()=>Decimal.pow(10,simpleETEffect(39)),
 
         null,
@@ -35,22 +35,22 @@ const EVOLUTION_TREE = {
 
         ()=>Decimal.pow(1.5,simpleETEffect(36)),
         ()=>Decimal.pow(1.5,simpleETEffect(37)),
-        ()=>Decimal.pow(1.1,simpleETEffect(38)),
+        ()=>Decimal.pow(1.2,simpleETEffect(38)),
         ()=>Decimal.mul(1,simpleETEffect(39)).min(8),
 
         ()=>simpleETEffect(36),
         ()=>simpleETEffect(37),
-        ()=>simpleETEffect(38),
+        ()=>Decimal.times(simpleETEffect(38),3),
         ()=>simpleETEffect(39),
 
         ()=>CURRENCIES.fish.total.max(0).add(10).log10().log10().div(60).add(1).mul(simpleETEffect(36)).pow(simpleCETEffect(20)),
         ()=>CURRENCIES.prestige.total.max(0).add(10).log10().log10().div(45).add(1).mul(simpleETEffect(37)).pow(simpleCETEffect(21)),
-        ()=>CURRENCIES.core.total.max(0).add(1).log10().root(2).div(60).add(1).mul(simpleETEffect(38)).pow(simpleCETEffect(22)),
+        ()=>CURRENCIES.core.total.max(0).add(1).log10().root(2).div(60).add(1).mul(simpleETEffect(38)).pow(simpleCETEffect(22)).times(5),
         ()=>Decimal.pow(2 * simpleETEffect(39),simpleCETEffect(23)),
 
         ()=>CURRENCIES.fish.total.max(0).add(10).log10().log10().div(2).mul(simpleETEffect(36)),
         ()=>CURRENCIES.stone.amount.max(0).add(1).log10().mul(5).mul(simpleETEffect(37)),
-        ()=>CURRENCIES.humanoid.amount.mul(simpleETEffect(38)),
+        ()=>CURRENCIES.humanoid.amount.mul(simpleETEffect(38)).times(3),
         ()=>Decimal.mul(30,simpleETEffect(39)),
 
         null,
@@ -65,12 +65,12 @@ const EVOLUTION_TREE = {
 
         ()=>Decimal.mul(2,simpleCETEffect(36)).mul(getNucleobaseEffect('guanine',4)),
         ()=>Decimal.mul(2,simpleCETEffect(37)).mul(getNucleobaseEffect('guanine',4)),
-        ()=>Decimal.mul(2,simpleCETEffect(38)).mul(getNucleobaseEffect('guanine',4)),
+        ()=>Decimal.mul(2,simpleCETEffect(38)).mul(getNucleobaseEffect('guanine',4)).times(1.5),
         ()=>Decimal.mul(2,simpleCETEffect(39)).mul(getNucleobaseEffect('guanine',4)),
 
         ()=>CURRENCIES.fish.total.max(0).add(10).log10().log10().div(6).add(1),
         ()=>CURRENCIES.prestige.total.max(0).add(10).log10().log10().div(6).add(1),
-        ()=>CURRENCIES.core.total.max(0).add(10).log10().root(2).div(6).add(1),
+        ()=>CURRENCIES.core.total.max(0).add(10).log10().root(2).div(6).add(1).times(10),
         ()=>20,
 
         null,
