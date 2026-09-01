@@ -204,7 +204,7 @@ const CURRENCIES = {
             if (player.omni.active) return E(0);
             if (!S_MILESTONES[0].req()) return E(0)
 
-            let x = E(10).add(getSharkBonus('remnants',0)).mul(getSharkRankBonus('remnants')).mul(getCRBoost(12)).mul(remnantUpgEffect(12)).mul(tmp.global_mult)
+            let x = E(1).add(getSharkBonus('remnants',0)).mul(getSharkRankBonus('remnants')).mul(getCRBoost(12)).mul(remnantUpgEffect(12)).mul(tmp.global_mult).mul(10)
 
             if (hasResearch('s1')) x = x.mul(researchEffect('s1'));
             if (hasResearch('dm7')) x = x.mul(researchEffect('dm7'));
