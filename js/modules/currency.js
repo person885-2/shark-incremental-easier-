@@ -262,7 +262,7 @@ const CURRENCIES = {
         get gain() {
             if (player.solar_system.active === "") return E(0);
 
-            let x = Decimal.mul(spaceBaseUpgEffect('o1'),spaceBaseUpgEffect('e1')).mul(spaceBaseUpgEffect('e2')).mul(spaceBaseUpgEffect('e3')).mul(spaceBaseUpgEffect('r1')).mul(tmp.global_mult)
+            let x = Decimal.mul(spaceBaseUpgEffect('o1'),spaceBaseUpgEffect('e1')).mul(spaceBaseUpgEffect('e2')).mul(spaceBaseUpgEffect('e3')).mul(spaceBaseUpgEffect('r1')).mul(tmp.global_mult).mul(10)
 
             if (isSSObserved('venus')) x = x.mul(10);
             if (isSSObserved('mars')) x = x.mul(10);
