@@ -29,7 +29,7 @@ const CONSTELLATION = {
     },
     
     get boost_mult() {
-        let x = remnantUpgEffect(16).mul(10)
+        let x = new Decimal(remnantUpgEffect(16)).mul(10)
 
         for (let i = 0; i < 4; i++) x = Decimal.mul(x,simpleCETEffect(40+i));
 
