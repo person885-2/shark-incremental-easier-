@@ -57,7 +57,7 @@ function getGalacticExplorationScore(fish,i) {
     var s = E(0)
     if (fish.gte(GE.fish_req)) {
         s = fish.slog(10).sub(GE.slog_fish_req).mul(10).add(1).pow(2).sub(1).pow10().max(1)
-        s = s.mul(getNucleobaseEffect('thymine',3))
+        s = s.mul(getNucleobaseEffect('thymine',3)).mul(10)
     }
     return s
 }
