@@ -281,7 +281,7 @@ function updateHadronTemp() {
 
         n_tmp.base_mult = data.upg[0].pow_base(2)
 
-        n_tmp.exp_gain = n_tmp.base_mult.mul(mult1).mul(tmp.global_mult)
+        n_tmp.exp_gain = n_tmp.base_mult.mul(mult1).mul(tmp.global_mult).mul(10)
         if (id === 'uracil') n_tmp.exp_gain = n_tmp.exp_gain.mul(getNucleobaseEffect('uracil',3));
 
         let bonus = E(0)
