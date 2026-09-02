@@ -6,7 +6,7 @@ const DNA = {
 
         x = x.sub(1).max(0).root(4).mul(2 * .34)
 
-        .mul(simpleResearchEffect('h17')).mul(simpleResearchEffect('h18'))
+        .mul(simpleResearchEffect('h17')).mul(simpleResearchEffect('h18')).mul(1.1)
 
         if (hasResearch('h21')) x = x.mul(player.hadron.dna.pow(.801 + player.hadron.dna.min(1e100).log10().toNumber()/100 * .064346524)); // 24
         
