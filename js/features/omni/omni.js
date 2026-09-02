@@ -202,7 +202,7 @@ const OMNI = {
         2: [0, x => {
             let b = E(2)
             if (player.omni.tier.gte(5)) b = b.add(sharkUpgEffect('os2',0));
-            return b.pow(x.sub(2)).mul(x.sub(1))
+            return b.pow(x.sub(2).mul(2)).mul(x.sub(1))
         }, x => "+"+format(x,0)],
         5: null,
         7: null,
