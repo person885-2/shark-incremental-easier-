@@ -32,7 +32,7 @@ const UNDEAD = {
 
         let x = E(getOmniReward(15,0))
 
-        if (!RUNE_SACRIFICE.in(2)) x = x.add(getUndeadUpgradeEffect(2,0)).add(decaySeriesEffect(0,1));
+        if (!RUNE_SACRIFICE.in(2)) x = x.add(getUndeadUpgradeEffect(2,0)).add(decaySeriesEffect(0,1)).mul(10);
 
         return x
     },
